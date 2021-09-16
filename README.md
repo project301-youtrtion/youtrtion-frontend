@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# Youtrition
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+our website is about the nutrition that the user can see his health status according to his BMI
+and provide to him a plan for his diet and he can find deferent recipes for wide list of meals
+so he can chose with the calories in each meal so he can track his daily calories mount.
 
-## Available Scripts
+[our wirefram](https://wireframepro.mockflow.com/view/MM4Fv28DJmb)
 
-In the project directory, you can run:
+## Team Members
 
-### `npm start`
+1. salsabil mislat (Team leader)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    my name is salsabil, 25 years old i graduated form university of jordan with chinese language and English literature
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+2. Ahmad Hamza
 
-### `npm test`
+     I'm an architect i graduate from al-albyt university and I have 7 years of experience in the structure filed.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Oqla Alrefai
 
-### `npm run build`
+    Hello, my name is Oqla Alrefai, I graduated the with a bachelor's degree in biomedical engineering from Yarmouk University.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Tamara Bassam
+    i am tamara 24 years old i studied nutrition and food processing in BAU 2019.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+5. Mohammad Aljadayh
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    I’m MohammadAljadayh I’m interested in Programing I’m currently learning to be A Full-Stuck Developer
 
-### `npm run eject`
+6. Haneen Haidrah
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    It's me Hanin Haidrah. I have studied English literature and graduated in 2019
