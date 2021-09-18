@@ -18,7 +18,7 @@ so he can chose with the calories in each meal so he can track his daily calorie
 
 3. Oqla Alrefai
 
-    Hello, my name is Oqla Alrefai, I graduated the with a bachelor's degree in biomedical engineering from Yarmouk University.
+    Hello, my name is Oqla Alrefai, I graduated with a bachelor's degree in biomedical engineering from Yarmouk University.
 
 4. Tamara Bassam
     i am tamara 24 years old i studied nutrition and food processing in BAU 2019.
