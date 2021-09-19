@@ -37,8 +37,8 @@ export class FormTracker extends Component {
 
     await this.setState({ totalCalories: this.state.totalCalories });
   };
-  handleCompletetracker = async() => {
-   await this.setState({ trackerData: [], totalCalories: 0 });
+  handleCompletetracker = async () => {
+    await this.setState({ trackerData: [], totalCalories: 0 });
   };
 
   render() {
@@ -92,11 +92,11 @@ export class FormTracker extends Component {
             </thead>
             <tbody>
               <tr>
-                <td>your Plan Calorie</td>
+                <td>{this.props.limitCals}</td>
                 <td></td>
                 <td>{this.state.totalCalories}</td>
                 <td></td>
-                <td>result</td>
+                <td>{this.props.limitCals-this.state.totalCalories}</td>
               </tr>
             </tbody>
           </Table>
