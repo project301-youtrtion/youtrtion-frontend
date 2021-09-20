@@ -1,0 +1,36 @@
+.tableform{
+font-size:20px;  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  background-color:transparent;
+border-style: none;
+/* border-bottom: rgb(29, 29, 28); */
+}
+
+.tableform td ,th{
+    color:#52734D;
+    
+
+}
+
+.buttonforClear.btn-primary {
+    color: #fff;
+    background-color: #198754;
+    border-color: #198754;
+}
+  .formTracker button {
+    background-color: #52734d;
+    color: #feffde;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+      Helvetica, Arial, "Lucida Grande", sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: rgba(0, 0, 0, 0.3) 0 -1.25px 0;
+    margin-right: 80%;
+    width: 70%;
+  }
+
+  h5{
+      color: #062402;
+  }
+  
