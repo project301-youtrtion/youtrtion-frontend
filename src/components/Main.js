@@ -17,7 +17,7 @@ export class Main extends Component {
     await this.setState({ limitCals: limitOfCals })
 
   }
-  
+
   loginHandler = (user) => {
     this.setState({
       user,
@@ -33,10 +33,11 @@ export class Main extends Component {
 
     return (
       <div>
+         <Header user={this.state.user} onLogout={this.logoutHandler} />
         <DietPlan getTheCalsLimit={this.getTheCalsLimit}/>
         
         <FormTracker limitCals={this.state.limitCals}/>
-        <Header user={this.state.user} onLogout={this.logoutHandler} />
+       
       
         {/* <News/> */}
 
