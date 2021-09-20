@@ -13,28 +13,28 @@ export class App extends Component {
     const isAuth = this.props.auth0.isAuthenticated;
 
     return (
-      <div> 
-            <>
-        <Router>
-          {/* <Header user={this.state.user} onLogout={this.logoutHandler} /> */}
-          <Switch>
-            <Route exact path="/">
-              {isAuth ? < Main/> : <Login />}
-            </Route>
-            <Route exact path="/profile">
-              {isAuth && <Profile />}
-            </Route>
-<Route exact path="/callback">
-          <Callback />
-      </Route>
-      <Route exact path="/recipes">
-          <Recipes message="Welcome to youtrition" showbutton="false" />
-      </Route>
-          </Switch>
-          {/* <Footer /> */}
-        </Router>
-      </>
-       
+      <div>
+        <>
+          <Router>
+            {/* <Header user={this.state.user} onLogout={this.logoutHandler} /> */}
+            <Switch>
+              <Route exact path="/">
+                {isAuth ? < Main /> : <Login />}
+              </Route>
+              <Route exact path="/profile">
+                {isAuth && <Profile />}
+              </Route>
+              <Route exact path="/callback">
+                <Callback />
+              </Route>
+              <Route exact path="/recipes">
+                <Recipes message="Welcome to youtrition" showbutton="false" />
+              </Route>
+            </Switch>
+            {/* <Footer /> */}
+          </Router>
+        </>
+
       </div>
     )
   }
