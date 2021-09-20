@@ -1,0 +1,85 @@
+.tableform{
+
+border: solid white 3px;
+
+}
+
+.tableform td {
+    color:white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14pt;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 2px black;
+}
+.tableform th {
+    color:white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14pt;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 2px black;
+}
+
+.buttonforClear.btn-primary {
+  background-color: rgb(77, 121, 34);    
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14pt;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-shadow: 2px 2px 2px black;
+  margin: 5px;
+  
+  border: solid white 3px;
+}
+.formTracker button {
+    background-color: rgb(77, 121, 34);    
+    color: white;
+    font-weight: bolder;
+    font-size: 12pt;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 2px black;
+    /* margin: 5px; */
+    border: solid white 3px;   
+    margin-right: 80%;
+    width: 90%;
+  }
+  
+  .buttonforClear.btn-primary:hover{
+    background-color: rgb(41, 63, 19);
+    border: solid rgb(145, 235, 54) 3px;
+  }
+  .formTracker button:hover{
+    background-color: rgb(41, 63, 19);
+    border: solid rgb(145, 235, 54) 3px;    
+  }
+  
+  
+  .claRemani h5{
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    padding: 3%;
+    font-weight: bolder;
+    font-size: 18pt;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+  }
+  
+  
+  .claRemani{
+    width: 700px;
+    /* height: 900px; */
+    margin-top: 2%;
+    margin-left: 23.5%;
+    /* color: white; */
+    /* text-shadow: 2px 2px 2px black; */
+    text-align: center;
+    font-weight: bolder;
+    font-size: 14pt;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+  }
+  
+  
+  
