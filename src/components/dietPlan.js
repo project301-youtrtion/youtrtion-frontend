@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table';
 import axios from "axios";
 import EditDataModel from './EditDataModel';
+import './dietPlan.css'
 
 export class DietPlan extends Component {
 
@@ -142,21 +143,18 @@ export class DietPlan extends Component {
                 <h3> {this.state.bmi}</h3> */}
                     <Table striped bordered hover style={{ width: '80%', marginLeft: '10%', marginTop: '30px' }}>
 
-                        <tbody>
+                        <tbody className='tdDitePlan'>
                             <tr >
-                                <td style={{ width: '50%' }}>BMI</td>
-                                <td>{this.state.bmi}</td>
-
+                                <td>BMI</td>
+                                <td >{this.state.bmi}</td>
                             </tr>
                             <tr>
                                 <td>Health State</td>
                                 <td>{this.state.healthStatus}</td>
-
                             </tr>
                             <tr>
                                 <td>Body Consumption Calories</td>
                                 <td>{this.state.dailyCalories}</td>
-
                             </tr>
                             <tr>
                                 <td>Limit Consumption Calories</td>
@@ -170,9 +168,9 @@ export class DietPlan extends Component {
 
                         {
                             this.state.userId ?
-                                <Button style={{ margin: '5px' }} onClick={this.handelDisplayUpdateModel}>
+                                <Button className='btnDitePlan' style={{ margin: '5px' }} onClick={this.handelDisplayUpdateModel}>
                                     Edit
-                                </Button> : <Button style={{ margin: '5px' }} onClick={this.handelDisplayDataModal}>
+                                </Button> : <Button className='btnDitePlan' onClick={this.handelDisplayDataModal}>
                                     Add
                                 </Button>
                         }

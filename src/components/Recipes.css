@@ -10,9 +10,9 @@ img:hover{
    cursor: pointer;
 }
 
-button{
+/* button{
     color: aqua !important;
-}
+} */
 
 .loading{
     padding-top: 100px;
