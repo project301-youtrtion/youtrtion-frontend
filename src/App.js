@@ -6,7 +6,8 @@ import Profile from './Profile';
 // import DietPlan from './components/dietPlan';
 import { withAuth0 } from "@auth0/auth0-react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
+import Callback from './components/Callback';
+import Recipes from './components/Recipes';
 export class App extends Component {
   render() {
     const isAuth = this.props.auth0.isAuthenticated;
@@ -23,6 +24,12 @@ export class App extends Component {
             <Route exact path="/profile">
               {isAuth && <Profile />}
             </Route>
+<Route exact path="/callback">
+          <Callback />
+      </Route>
+      <Route exact path="/recipes">
+          <Recipes message="Welcome to youtrition" showbutton="false" />
+      </Route>
           </Switch>
           {/* <Footer /> */}
         </Router>
@@ -34,3 +41,4 @@ export class App extends Component {
 }
 
 export default withAuth0(App);
+
