@@ -5,7 +5,7 @@ import { Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import axios from "axios";
 import Table from "react-bootstrap/Table";
-
+import "../FormTracker.css"
 export class FormTracker extends Component {
   constructor(props) {
     super(props);
@@ -52,13 +52,14 @@ export class FormTracker extends Component {
             marginTop: "5%",
             paddingLeft: "4%",
           }}
+          className="formTracker"
         >
           <Row>
             <Col xs={7}>
-              <Form.Control placeholder="Search for food" name="item" />
+              <Form.Control type='text' placeholder="Search for food" name="item" />
             </Col>
             <Col>
-              <Form.Control placeholder="quantity/serve" name="serve" />
+              <Form.Control type='text' placeholder="quantity/serve" name="serve" />
             </Col>
             <Col>
               <Button type="submit">Add Item</Button>
@@ -107,6 +108,7 @@ export class FormTracker extends Component {
           bordered
           hover
           style={{ width: "60%", marginLeft: "20%", marginTop: "2%" }}
+          className="tableform"
         >
           <thead>
             <tr>
@@ -138,10 +140,10 @@ export class FormTracker extends Component {
           </tbody>
         </Table>
         <Button
-          variant="primary"
           size="lg"
           style={{ marginLeft: "40%", marginTop: "10%" }}
           onClick={this.handleCompletetracker}
+          className="buttonforClear"
         >
           Complete your Daily-Tracker
         </Button>
