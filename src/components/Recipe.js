@@ -7,8 +7,9 @@ export default function Recipe(props) {
                             <img src={props.recipe.image} alt={props.recipe.name}/>
                         </div>
                         <div className="col-md-9">
-                            <h2>Recipe Name: {props.recipe.name}</h2>
+                            <h3>Recipe Name: {props.recipe.name}</h3>
                             <p>Calories: {props.recipe.calories}</p>
+                            <p>DietLabels {props.recipe.dietLabels}</p>
                             <p>Ingredients: {props.recipe.ingredients}</p>
                       
                         </div>

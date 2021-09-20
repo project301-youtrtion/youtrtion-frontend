@@ -1,9 +1,11 @@
 .row{
     margin-top: 40px !important;
+
 }
 
 img{
     height: 200px !important;
+    
 }
 
 img:hover{
@@ -25,4 +27,21 @@ button{
 .backbutton{
     padding-top: 30px;
     padding-bottom: 50px;;
+}
+
+.formsearch{
+margin-left: 16%;
+width: 120%;
+
+}
+
+.form-text{
+
+    height: 120%;
+}
+.buttonform
+{
+    height: 120%;
+    margin-top: .5%;
+    margin-left:-3%;
 }

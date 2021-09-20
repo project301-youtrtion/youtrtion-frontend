@@ -23,7 +23,7 @@ class Header extends React.Component {
       />     
         </Navbar.Brand>
         <Navbar.Brand style={{color:'#52734D'}}>Youtrition</Navbar.Brand>
-        <NavItem><Link  style={{color:'#52734D'}} to="/" className="nav-link">Home</Link></NavItem>
+        <NavItem><Link  style={{color:'#52734D'}} to="/recipes" className="nav-link">Home</Link></NavItem>
         {
           isAuth &&
           <NavItem><Link to="/profile" className="nav-link" style={{color:'#52734D'}} >Profile</Link></NavItem>

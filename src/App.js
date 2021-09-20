@@ -8,6 +8,8 @@ import { withAuth0 } from "@auth0/auth0-react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Callback from './components/Callback';
 import Recipes from './components/Recipes';
+import './App.css';
+
 export class App extends Component {
   render() {
     const isAuth = this.props.auth0.isAuthenticated;
@@ -28,7 +30,8 @@ export class App extends Component {
           <Callback />
       </Route>
       <Route exact path="/recipes">
-          <Recipes message="Welcome to youtrition" showbutton="false" />
+      {isAuth && <Recipes message="Welcome to youtrition" showbutton="false" />}
+          
       </Route>
           </Switch>
           {/* <Footer /> */}
