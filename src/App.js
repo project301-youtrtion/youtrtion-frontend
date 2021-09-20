@@ -1,17 +1,36 @@
 import React, { Component } from 'react'
 import { Main } from './components/Main';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import Login from './Login';
+import Profile from './Profile';
+// import DietPlan from './components/dietPlan';
+import { withAuth0 } from "@auth0/auth0-react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 export class App extends Component {
   render() {
+    const isAuth = this.props.auth0.isAuthenticated;
+
     return (
-      <div>       
-        <Main/>
+      <div> 
+            <>
+        <Router>
+          {/* <Header user={this.state.user} onLogout={this.logoutHandler} /> */}
+          <Switch>
+            <Route exact path="/">
+              {isAuth ? < Main/> : <Login />}
+            </Route>
+            <Route exact path="/profile">
+              {isAuth && <Profile />}
+            </Route>
+          </Switch>
+          {/* <Footer /> */}
+        </Router>
+      </>
+       
       </div>
     )
   }
 }
 
-export default App;
-
+export default withAuth0(App);
