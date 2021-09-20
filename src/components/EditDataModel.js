@@ -3,19 +3,17 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
-// import Modal from 'react-bootstrap/Modal';
 
-
-export class DataModal extends Component {
+export class EditDataModel extends Component {
     render() {
         return (
             <div>
-                <Modal show={this.props.showDataModal} onHide={this.props.handelDisplayDataModal}>
+                <Modal show={this.props.showUpdateModel} onHide={this.props.handelDisplayUpdateModel}>
                     <Modal.Header closeButton>
                         <Modal.Title>Your Information</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        <Form onSubmit={this.props.handelAdd}>
+                        <Form onSubmit={this.props.handelUpdate}>
                             <Form.Group controlId="exampleForm.ControlSelect1">
                                 <Form.Label>your Gender</Form.Label>
                                 <Form.Control as="select" name="gender">
@@ -56,4 +54,4 @@ export class DataModal extends Component {
     }
 }
 
-export default DataModal
+export default EditDataModel

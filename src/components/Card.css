@@ -1,0 +1,13 @@
+
+
+.card:hover img{
+    transition: .1s ease;
+    opacity: 0.5;
+}
+
+
+.card:hover h2{
+    transition: .3s ease;
+    opacity: .7;
+    cursor: pointer;
+}
