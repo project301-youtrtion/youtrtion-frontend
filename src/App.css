@@ -24,3 +24,9 @@ body{
 .App-link {
   color: #09d3ac;
 }
+
+
+.table {
+  width: 80%;
+  margin-left: 10%;
+}
