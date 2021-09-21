@@ -1,6 +1,8 @@
 import React from "react";
 
 class NewsCard extends React.Component {
+
+
   render() {
     return (
       <>
@@ -34,6 +36,7 @@ class NewsCard extends React.Component {
                                     color: "black",
                                     width: "56%",
                                   }}
+                                  onClick={this.link}
                                 >
                                   <b>READ MORE »</b>
                                 </button>

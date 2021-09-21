@@ -24,6 +24,7 @@ class News extends React.Component {
     await this.setState({ newsData: getNews.data, info: true });
     console.log(this.state.newsData.results);
   };
+ 
   render() {
     return (
       <div>

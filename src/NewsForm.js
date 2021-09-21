@@ -8,7 +8,7 @@ class NewsForm extends React.Component {
         <Form className="formTracker" onSubmit={this.props.handleSearch}>
           <Row className="formRow">
             <Col xs={7}>
-            <img id='iconimage' src='https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png'/>
+            <img id='iconimage' src='https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png' alt=''/>
 
               <Form.Control
                 type="text"
