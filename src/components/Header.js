@@ -8,37 +8,41 @@ import { withAuth0 } from '@auth0/auth0-react';
 
 class Header extends React.Component {
   render() {
+    const user = this.props.auth0.user;
     const isAuth = this.props.auth0.isAuthenticated;
     return (
-      <Navbar collapseOnSelect expand="lg" style={{backgroundColor :'#DDFFBC'}} >
-        <Navbar.Brand>
-        <img
-        src={window.location.origin +'/youtrition.png'}
-        width="50"
-        height="50"
-        className="d-inline-block align-top"
-        alt="logo"
-        style={{marginLeft:'20%',paddingRight:'7%'}}
-   
-      />     
-        </Navbar.Brand>
-        {/* <Navbar.Brand style={{color:'#52734D'}}>Youtrition</Navbar.Brand> */}
-        <NavItem><Link  style={{color:'#52734D'}} to="/" className="nav-link">Youtrition</Link></NavItem>
-        {
-          isAuth &&
-          <NavItem><Link to="/profile" className="nav-link" style={{color:'#52734D'}} >Profile</Link></NavItem>
-        }
-        
-        {
-          isAuth &&
-          <NavItem><Link to="/news" className="nav-link" style={{color:'#52734D'}} >Latest News</Link></NavItem>
-        }
+      <header>
+        <Navbar collapseOnSelect expand="lg" style={{ backgroundColor: '#213E3B', height: '100px' }} >
+          <Navbar.Brand>
+            <img
+              src={window.location.origin + '/logo.png'}
+              alt="logo"
+              style={{ height: '80px', marginLeft: '30px', marginBottom: '10px' }}
 
-        
-        {
-          isAuth ? <LogoutButton /> : <LoginButton />
-        }
-      </Navbar>
+            />
+          </Navbar.Brand>
+
+          {/* <Navbar.Brand style={{color:'#52734D'}}>Youtrition</Navbar.Brand> */}
+          <NavItem><Link style={{ color: 'white', fontSize: "14pt" }} to="/" className="nav-link">Youtrition</Link></NavItem>
+
+          {
+            isAuth &&
+            <NavItem><Link to="/profile" className="nav-link" style={{ color: 'white', fontSize: "14pt" }} >Profile</Link></NavItem>
+          }
+
+          {
+            isAuth &&
+            <NavItem><Link to="/news" className="nav-link" style={{ color: 'white', fontSize: "14pt" }} >Latest News</Link></NavItem>
+          }
+          
+            <NavItem style={{ color: 'white', fontSize: "14pt", marginLeft:'55%' }}>{user.name}</NavItem>
+          
+
+          {
+            isAuth ? <LogoutButton /> : <LoginButton />
+          }
+        </Navbar>
+      </header>
     )
   }
 }

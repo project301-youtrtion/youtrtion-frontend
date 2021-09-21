@@ -1,0 +1,45 @@
+.tdDitePlan td {
+    color: #213E3B;
+    
+    font-weight: bold;
+    font-size: 14pt;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* text-shadow: 2px 2px 2px black; */
+    width: 50%;
+    background-color: #E8FFFF;
+
+    border-style: none;
+}
+.btnDitePlan.btn-primary {
+    background-color: #213E3B;
+    
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14pt;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 2px black;
+    margin: 5px;
+    border: solid #E8FFFF 3px;
+    
+}
+.btnDitePlan.btn-primary:hover{
+    background-color: #41AEA9;
+    border: solid #E8FFFF 3px;
+
+}
+.tdDitePlan{
+    border-style: none;
+    border-bottom: solid #213E3B 3px;
+}
+.tdDitePlan tr {
+    color: #213E3B;
+  
+    font-weight: bold;
+    font-size: 14pt;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #E8FFFF;
+    width: 50%;
+   
+    border-style: none;
+}

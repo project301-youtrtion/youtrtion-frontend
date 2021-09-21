@@ -1,36 +1,88 @@
 .tableform{
-font-size:20px;  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  background-color:transparent;
-border-style: none;
-/* border-bottom: rgb(29, 29, 28); */
+
+/* border: solid white 3px; */
+width: 20%;
+
 }
 
-.tableform td ,th{
-    color:#52734D;
-    
-
+.tableform td {
+    color:#213E3B;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14pt;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* text-shadow: 2px 2px 2px black; */
+}
+.tableform th {
+    color:#213E3B;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14pt;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* text-shadow: 2px 2px 2px black; */
 }
 
 .buttonforClear.btn-primary {
-    color: #fff;
-    background-color: #198754;
-    border-color: #198754;
+  background-color: #213E3B;    
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14pt;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-shadow: 2px 2px 2px black;
+  margin:5%;
+  border: solid white 3px;
 }
-  .formTracker button {
-    background-color: #52734d;
-    color: #feffde;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
-      Helvetica, Arial, "Lucida Grande", sans-serif;
-    text-transform: uppercase;
-    font-size: 14px;
-    text-decoration: none;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-shadow: rgba(0, 0, 0, 0.3) 0 -1.25px 0;
+.formTracker button {
+    background-color: #213E3B;    
+    color: white;
+    font-weight: bolder;
+    font-size: 12pt;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 2px black;
+    /* margin: 5px; */
+    border: solid white 3px;   
     margin-right: 80%;
-    width: 70%;
+    width: 90%;
   }
-
-  h5{
-      color: #062402;
+  
+  .buttonforClear.btn-primary:hover{
+    background-color: #41AEA9;
+    border: solid #E8FFFF 3px;
   }
+  .formTracker button:hover{
+    background-color: #41AEA9;
+    border: solid #E8FFFF 3px;    
+  }
+  
+  
+  .claRemani h5{
+    color: #213E3B;
+    /* text-shadow: 2px 2px 2px black; */
+    padding: 3%;
+    font-weight: bolder;
+    font-size: 18pt;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+  }
+  
+  
+  .claRemani{
+    width: 700px;
+    /* height: 900px; */
+    margin-top: 2%;
+    margin-left: 23.5%;
+    /* color: white; */
+    /* text-shadow: 2px 2px 2px black; */
+    text-align: center;
+    font-weight: bolder;
+    font-size: 14pt;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+  }
+  
+  .formTracker Form.Control{
+    width: 20%;
+  }
+  
   

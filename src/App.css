@@ -1,17 +1,18 @@
-body{
+/* body{
   font-family: 'Changa', sans-serif;
-}
-
-.App {
-  text-align: center;
-}
-
+  background-image: url("/home/salsabilmislat/code301/youtrtion-frontend/src/images/download.jpg");
+ background-repeat: no-repeat;
+ background-size:cover;
+ 
+ 
+} */
+/* 
 .App-logo {
   height: 40vmin;
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: black;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -23,10 +24,11 @@ body{
 
 .App-link {
   color: #09d3ac;
-}
+} */
 
-
+/* 
 .table {
   width: 80%;
   margin-left: 10%;
-}
+} */
+

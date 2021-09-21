@@ -3,7 +3,11 @@ import FormTracker from './FormTracker';
 import DietPlan from './dietPlan';
 // import News from '../News'
 import { withAuth0 } from "@auth0/auth0-react";
-import Header from './Header';
+// import Header from './Header';
+import Tabs from 'react-bootstrap/Tabs'
+import Tab from 'react-bootstrap/Tab'
+
+
 
 export class Main extends Component {
   constructor(props) {
@@ -32,21 +36,25 @@ export class Main extends Component {
   render() {
 
     return (
-      <div>
-         <Header user={this.state.user} onLogout={this.logoutHandler} />
-        <DietPlan getTheCalsLimit={this.getTheCalsLimit}/>
+      <div className='main' >
         
-        <FormTracker limitCals={this.state.limitCals}/>
-       
-      
-        {/* <News/> */}
+        <Tabs defaultActiveKey="BMI" id="uncontrolled-tab-example" className="mb-3">
+          <Tab eventKey="BMI" title="BMI" >
+            <DietPlan getTheCalsLimit={this.getTheCalsLimit} />
+          </Tab>
+          <Tab eventKey="Calories Tracker" style={{ color: 'white' }} title="Calories Tracker"
+            style={{ fontcolor: 'white' }}>
+            <FormTracker limitCals={this.state.limitCals} />
+          </Tab>
+        </Tabs>
+        
 
       </div>
     )
   }
 }
 
-export default  withAuth0(Main);;
+export default withAuth0(Main);;
 
 
 

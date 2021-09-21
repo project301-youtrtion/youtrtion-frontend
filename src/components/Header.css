@@ -1,13 +1,13 @@
-button {
-  background-color: #52734d;
-  color: #feffde;
+
+#logOut{
+  background-color: transparent;
+  color: white;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
     Helvetica, Arial, "Lucida Grande", sans-serif;
-  text-transform: uppercase;
-  font-size: 14px;
+  font-size: 12.5pt;
   text-decoration: none;
   font-weight: bold;
-  text-transform: uppercase;
   text-shadow: rgba(0, 0, 0, 0.3) 0 -1.25px 0;
-  margin-right: 80%;
+  border-style: none;
+ padding-left: 30px;
 }

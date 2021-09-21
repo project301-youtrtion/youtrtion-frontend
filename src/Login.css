@@ -1,35 +1,39 @@
-.parent{
-    position: relative;
+.loginPage{
+    background-image: url("/home/salsabilmislat/code301/youtrtion-frontend/src/images/download.jpg");
+ background-repeat: no-repeat;
+ background-size:cover;
+    height: 750px;
+   
 }
-
-.parent img {
-    position: absolute;
-    top: 73%;
-    right: 49%;
-}
-
-  .card-img-top {
-    width: 205%;
-} */
-body{
-    background-color:#FEFFDE;
-}
-
 #Login{
     position: absolute;
-    top: 1000%;
-    left: 70%;
-    width: 20%;
-    height: 50px;}
-
-    /* h2{
-        position: absolute;
-        top: 400%;
-        left: 73%;
     
-    } */
-    /* p{
-        position: absolute;
-        top: 200%;
-        left: 73%; 
-    } */
+    width: 20%;
+
+    height: 50px;
+    margin-left: 20%;
+    background-color: #213E3B;
+    color:#E4EFE7;
+    font-size: 18pt;
+    }
+    
+    #mainh2{
+          margin-left: 12%;
+        padding-top: 200px;
+        color: #213E3B;
+        font-weight: bolder;
+        font-size: 60pt;
+      
+
+    }
+    #mainp{
+        margin-left:5%;
+        /* font-weight: bolder; */
+        color:#213E3B;
+        font-size: 40pt
+        
+        
+    }
+    
+
+

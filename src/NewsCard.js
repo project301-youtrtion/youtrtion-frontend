@@ -6,12 +6,12 @@ class NewsCard extends React.Component {
   render() {
     return (
       <>
-        <div class="w3-content" style={{ maxWidth: "1400px" }}>
+        <div class="w3-content" style={{ backgroundColor:'white'}}>
           {this.props.info &&
             this.props.newsData.results.map((el) => {
               return (
                 <>
-                  <div className="w3-row">
+                  <div className="w3-row" >
                     <div className="w3-col l8 s12">
                       <div className="w3-card-4">
                         <div className="w3-container">
