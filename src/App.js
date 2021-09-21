@@ -8,6 +8,7 @@ import Profile from "./Profile";
 // import DietPlan from './components/dietPlan';
 import { withAuth0 } from "@auth0/auth0-react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 import Callback from "./components/Callback";
 import Recipes from "./components/Recipes";
 
@@ -16,11 +17,13 @@ import './App.css'
 import Header from "./components/Header";
 import News from "./News";
 
+
 export class App extends Component {
   render() {
     const isAuth = this.props.auth0.isAuthenticated;
 
     return (
+
       <div>
         <>
           <Router>
