@@ -3,10 +3,11 @@ import React from "react";
 import "./Login.css";
 import LoginForm from "./LoginForm";
 
+
 class Login extends React.Component {
   render() {
     return (
-      <div className="parent">
+      <div >
         <LoginForm />
       </div>
     );
