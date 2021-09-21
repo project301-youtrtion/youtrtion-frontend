@@ -1,7 +1,6 @@
 import React from "react";
 import axios from "axios";
 import "./News.css";
-import NewsPosts from "./NewsPosts";
 import NewsForm from "./NewsForm";
 import NewsCard from "./NewsCard";
 
@@ -20,7 +19,7 @@ class News extends React.Component {
     console.log("hi");
     await this.setState({ searchData: e.target.search.value });
     console.log(this.state.searchData);
-    const serverUrl = `${process.env.REACT_APP_SERVER_URL}/news?q=${this.state.searchData}`;
+    const serverUrl = `${process.env.REACT_APP_SERVER_URL}/news?qintitle=${this.state.searchData}`;
     const getNews = await axios.get(serverUrl);
     await this.setState({ newsData: getNews.data, info: true });
     console.log(this.state.newsData.results);
@@ -35,10 +34,7 @@ class News extends React.Component {
       newsData={this.state.newsData}
       />
 
-        {/* <NewsPosts 
-        
-        info={this.state.info}
-        newsData={this.state.newsData}/> */}
+      
       </div>
     );
   }

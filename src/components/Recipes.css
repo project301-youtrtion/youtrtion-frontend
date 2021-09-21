@@ -3,7 +3,7 @@
 }
 
 img{
-    height: 200px !important;
+    height: 200px ;
 }
 
 img:hover{
@@ -11,7 +11,7 @@ img:hover{
 }
 
 button{
-    color: aqua !important;
+    color: aqua ;
 }
 
 .loading{

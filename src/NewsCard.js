@@ -12,11 +12,6 @@ class NewsCard extends React.Component {
                   <div className="w3-row">
                     <div className="w3-col l8 s12">
                       <div className="w3-card-4">
-                        <img
-                          src={el.image_url}
-                          alt="BREAKING NEWS"
-                          style={{ width: "100%" }}
-                        />
                         <div className="w3-container">
                           <h3>
                             <b>{el.title}</b>
