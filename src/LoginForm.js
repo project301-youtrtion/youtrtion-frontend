@@ -6,10 +6,12 @@ class LoginForm extends React.Component {
     return (
       <div>
         <div>
+
           <h2 id="mainh2">Youtrition App</h2>
           <p id="mainp">
           An Apple a Day keep the Doctor Away
           </p>
+
         </div>
 
         <LoginButton />

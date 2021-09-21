@@ -5,6 +5,7 @@ import Modal from 'react-bootstrap/Modal';
 
 
 export class EditDataModel extends Component {
+
     render() {
         return (
             <div>
@@ -16,26 +17,26 @@ export class EditDataModel extends Component {
                         <Form onSubmit={this.props.handelUpdate}>
                             <Form.Group controlId="exampleForm.ControlSelect1">
                                 <Form.Label>your Gender</Form.Label>
-                                <Form.Control as="select" name="gender">
+                                <Form.Control as="select" name="gender" defaultValue={this.props.modelState.gender}>
                                     <option value="male">male</option>
                                     <option value="female">female</option>
                                 </Form.Control>
                             </Form.Group>
                             <Form.Group className="mb-3">
                                 <Form.Label>Height</Form.Label>
-                                <Form.Control type="text" name="height" placeholder="your Height" />
+                                <Form.Control type="text" name="height" placeholder="your Height" defaultValue={this.props.modelState.height} />
                             </Form.Group>
                             <Form.Group className="mb-3">
                                 <Form.Label>weight</Form.Label>
-                                <Form.Control type="text" name="weight" placeholder="your Weight" />
+                                <Form.Control type="text" name="weight" placeholder="your Weight" defaultValue={this.props.modelState.weight} />
                             </Form.Group>
                             <Form.Group className="mb-3">
                                 <Form.Label>Age</Form.Label>
-                                <Form.Control type="text" name="age" placeholder="your Age" />
+                                <Form.Control type="text" name="age" placeholder="your Age" defaultValue={this.props.modelState.age} />
                             </Form.Group>
                             <Form.Group controlId="exampleForm.ControlSelect1">
                                 <Form.Label>your Pishical Activety</Form.Label>
-                                <Form.Control as="select" name="activety">
+                                <Form.Control as="select" name="activety" defaultValue={this.props.modelState.activety}>
                                     <option value="1">sedentery</option>
                                     <option value="1.14">Low Active</option>
                                     <option value="1.27">Active</option>

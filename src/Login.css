@@ -1,13 +1,4 @@
 
-.card{
-    margin: auto;
-    text-align: center;
-    
-  }
-  .card-img-top {
-    width: 205%;
-}
-
 #Login{
     position: absolute;
     
@@ -18,8 +9,6 @@
     color:#E4EFE7;
     font-size: 18pt;
     }
-
-    
     
     #mainh2{
           margin-left: 12%;
@@ -27,11 +16,7 @@
         color: #064420;
         font-weight: bolder;
         font-size: 60pt;
-       
       
-        
-        
-
 
     }
     #mainp{
@@ -45,3 +30,4 @@
         
     }
     
+
