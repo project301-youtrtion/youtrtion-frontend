@@ -1,4 +1,10 @@
-
+.loginPage{
+    background-image: url("/home/salsabilmislat/code301/youtrtion-frontend/src/images/download.jpg");
+ background-repeat: no-repeat;
+ background-size:cover;
+    height: 750px;
+   
+}
 #Login{
     position: absolute;
     
@@ -6,26 +12,24 @@
 
     height: 50px;
     margin-left: 20%;
-    background-color: #064420;
+    background-color: #213E3B;
     color:#E4EFE7;
     font-size: 18pt;
     }
     
     #mainh2{
           margin-left: 12%;
-          margin-top: 10%;
-        color: #064420;
+        padding-top: 200px;
+        color: #213E3B;
         font-weight: bolder;
         font-size: 60pt;
       
 
     }
     #mainp{
-        
-        
         margin-left:5%;
         /* font-weight: bolder; */
-        color:#064420;
+        color:#213E3B;
         font-size: 40pt
         
         

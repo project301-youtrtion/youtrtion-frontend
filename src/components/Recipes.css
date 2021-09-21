@@ -1,18 +1,17 @@
+body{
+    background-color: #E8FFFF;
+}
 .row{
-    margin-top: 40px !important;
-
+    margin-top: 40px ;
 }
 
 img{
-
     height: 200px ;
-
 }
 
 img:hover{
    cursor: pointer;
 }
-
 
 .loading{
     padding-top: 100px;
@@ -24,12 +23,19 @@ img:hover{
 
 .backbutton{
     padding-top: 30px;
-    padding-bottom: 50px;;
+    padding-bottom: 50px;
+    background-color:#213E3B ;
 }
 
+.backbutton:hover{
+    background-color: #41AEA9;
+}
+
+
 .formsearch{
-margin-left: 16%;
-width: 120%;
+margin-left: 30%;
+width: 68%;
+padding-top: 30px;
 
 }
 
@@ -39,7 +45,38 @@ width: 120%;
 }
 .buttonform
 {
+    background-color:#213E3B ;
     height: 120%;
     margin-top: .5%;
     margin-left:-3%;
+    
+}
+.buttonform:hover{
+    background-color: #41AEA9;
+}
+
+.buttonfor
+{
+    background-color:#213E3B ;
+    color: white;
+    height: 40px;
+    width: 100px;
+    margin-top: .5%;
+    /* margin-left:-3%; */
+    
+}
+.buttonfor:hover{
+    background-color: #41AEA9;
+}
+.col-sm-8{
+    text-align: center;
+    margin-left: 15%;
+    padding-top: 50px;
+    color: #213E3B;
+   
+}
+.col-md-9{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* font-weight: bold; */
+    color: #213E3B;
 }

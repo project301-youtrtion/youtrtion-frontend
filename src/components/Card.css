@@ -11,3 +11,8 @@
     opacity: .7;
     cursor: pointer;
 }
+
+.card-text{
+    text-align: center;
+    color:#213E3B;
+}
