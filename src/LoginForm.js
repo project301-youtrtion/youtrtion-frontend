@@ -7,7 +7,7 @@ class LoginForm extends React.Component {
       <div>
         <div>
           {" "}
-          <img
+          <img 
             src={
               window.location.origin +
               "/—Pngtree—nutrition diet sport icon_5413722.png"
