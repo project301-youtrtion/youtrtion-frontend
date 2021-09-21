@@ -25,16 +25,19 @@ export class App extends Component {
         <>
           <Router>
 
+
           {isAuth && <Header/>}
             <Switch>
               <Route exact path="/">
                 {isAuth ? <Recipes /> : <Login />}
+
 
               </Route>
               <Route exact path="/profile">
                 {isAuth && <Profile />}
               </Route>
               <Route exact path="/callback">
+
 
               {isAuth &&  <Callback />}
               </Route>
@@ -46,6 +49,7 @@ export class App extends Component {
 
           </Router>
         </>
+
       </div>
     );
   }

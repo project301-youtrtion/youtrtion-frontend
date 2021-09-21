@@ -66,20 +66,14 @@ export class FormTracker extends Component {
             </Col>
           </Row>
         </Form>
-        <div
-          style={{
-            width: "700px",
-            // backgroundColor: "GrayText",
-            heigth: "900px",
-            marginTop: "2%",
-            marginLeft: "25%",
-          }}
+        <div className= 'claRemani'
+        
         >
-          <h5 style={{ textAlign: "center", padding: "2%" }}>
+          <h5 >
             Calories Remaining
           </h5>
 
-          <Table responsive>
+          <Table responsive className='dailyCalGoalTable' > 
             <thead>
               <tr>
                 <th style={{ width: "20%" }}>Goal</th>
@@ -104,8 +98,8 @@ export class FormTracker extends Component {
         </div>
 
         <Table
-          striped
-          bordered
+          // striped
+          // bordered
           hover
           style={{ width: "60%", marginLeft: "20%", marginTop: "2%" }}
           className="tableform"
