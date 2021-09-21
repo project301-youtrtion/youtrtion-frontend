@@ -1,0 +1,57 @@
+.w3-content {
+  margin-left: 5%;
+  margin-top: 5%;
+  float: left;
+}
+
+.w3-row {
+  width: 50%;
+}
+
+.w3-container h3,
+h5 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: rgb(0, 0, 15);
+}
+
+.w3-card-4 {
+  background-color:white;
+}
+
+.newbutton {
+  padding: 2%;
+  background-color: transparent;
+  border: black;
+  color: rgb(0, 0, 15);
+  width: 56%;
+  text-shadow: none;
+  font-weight: lighter;
+}
+
+p .w3-padding-large {
+  float: right;
+  margin-left: 60%;
+  margin-top: -12%;
+}
+/* .w3-card-w3-margin {
+  margin-left: 55%;
+  width: 40%;
+  background-color: tomato;
+  position: absolute;
+  top: 51%;
+  margin-top: 5%;
+}
+.w3-padding-16{
+    /* padding: 16px; */
+    
+.formTracker {
+    width: 60%;
+    margin-top: 5%;
+    padding-left: 4%;
+    margin-left: 5%;
+
+}
+.formRow .row{
+    width: 80%;
+    border-radius: 20px;
+}
