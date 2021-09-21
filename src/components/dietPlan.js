@@ -4,7 +4,9 @@ import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table';
 import axios from "axios";
 import EditDataModel from './EditDataModel';
+
 import './dietPlan.css'
+import { withAuth0 } from '@auth0/auth0-react';
 
 export class DietPlan extends Component {
 
@@ -18,7 +20,14 @@ export class DietPlan extends Component {
             bmi: '',
             limitOfCalories: '',
             recipeType: '',
-            userId: ''
+            userId: '',
+            email: this.props.auth0.user.email,
+            gender :'',
+            height:'',
+            weight:'',
+            age :'',
+            activety:''
+        
         })
     }
 
@@ -36,11 +45,11 @@ export class DietPlan extends Component {
     }
 
     handelBmi = async (email) => {
-        // e.preventDefault();
-        // let email = 'ahmadhamzh@ymail.com';
-        let serverUrl = `${process.env.REACT_APP_SERVER_URL}/diet?email=${email}`;
+      
+            let serverUrl = `${process.env.REACT_APP_SERVER_URL}/diet?email=${email}`;
         const BmiDataResponce = await axios.get(serverUrl);
-
+        console.log(BmiDataResponce.data[0]);
+        if (BmiDataResponce.data[0]) {
         let gender = BmiDataResponce.data[0].gender;
         let height = BmiDataResponce.data[0].height;
         let weight = BmiDataResponce.data[0].weight;
@@ -74,18 +83,23 @@ export class DietPlan extends Component {
             typeOfRecipe = 'high fiber, low carbs, low Fat'
         }
         await this.setState({
-            dailyCalories: dailyCal,
-            // showDataModal:!this.state.showDataModal,
+            dailyCalories: dailyCal,           
             healthStatus: weightStatus,
             bmi: bmi,
             limitOfCalories: caloreisLimit,
-            recipeType: typeOfRecipe,
-            // showUpdateModel: !this.state.showUpdateModel,
-            userId: BmiDataResponce.data[0]._id
+            recipeType: typeOfRecipe,            
+            userId: BmiDataResponce.data[0]._id,
+            gender :gender,
+            height:height,
+            weight:weight,
+            age :age,
+            activety:activety
+
         });
-        // console.log(this.state);
-        // console.log(BmiDataResponce.data);
-        this.props.getTheCalsLimit(this.state.limitOfCalories);
+        console.log(this.state.height);
+        this.props.getTheCalsLimit(this.state.limitOfCalories); 
+        }
+        
     }
     handelAdd = (e) => {
         console.log('hi');
@@ -96,13 +110,15 @@ export class DietPlan extends Component {
             weight: e.target.weight.value,
             age: e.target.age.value,
             activety: e.target.activety.value,
-            email: 'salsabil@gmail.com',
+            // email: 'salsabil@gmail.com',
+            email: this.props.auth0.user.email
         }
         const responsePost = axios.post(`${process.env.REACT_APP_SERVER_URL}/diet`, responseBody);
-        console.log(responsePost);
+        
         this.handelBmi(responseBody.email);
-       this.handelDisplayDataModal();
-
+        this.handelDisplayDataModal();
+        console.log(responsePost);
+        
     }
 
     handelUpdate = (e) => {
@@ -113,17 +129,24 @@ export class DietPlan extends Component {
             weight: e.target.weight.value,
             age: e.target.age.value,
             activety: e.target.activety.value,
-            email: 'salsabil@gmail.com',
+            // email: 'salsabil@gmail.com',
+            email: this.props.auth0.user.email
 
         }
         this.handelBmi(responseBody.email);
         const updateResponse = axios.put(`${process.env.REACT_APP_SERVER_URL}/diet/${this.state.userId}`, responseBody);
         this.handelBmi(responseBody.email);
-       this.handelDisplayUpdateModel();
+        this.handelDisplayUpdateModel();
         console.log(updateResponse);
     }
 
+    componentDidMount = () => {
+        this.handelBmi(this.state.email);
+        
+    };
+
     render() {
+
         return (
             <div>
 
@@ -136,6 +159,7 @@ export class DietPlan extends Component {
                     handelUpdate={this.handelUpdate}
                     showUpdateModel={this.state.showUpdateModel}
                     handelDisplayUpdateModel={this.handelDisplayUpdateModel}
+                    modelState={this.state}
                 />
                 <>
                     {/* <h3> your daily current calories consumption is {this.state.dailyCalories}</h3>
@@ -183,4 +207,4 @@ export class DietPlan extends Component {
     }
 }
 
-export default DietPlan
+export default withAuth0(DietPlan)

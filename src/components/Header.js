@@ -22,12 +22,19 @@ class Header extends React.Component {
    
       />     
         </Navbar.Brand>
-        <Navbar.Brand style={{color:'#52734D'}}>Youtrition</Navbar.Brand>
-        <NavItem><Link  style={{color:'#52734D'}} to="/" className="nav-link">Home</Link></NavItem>
+        {/* <Navbar.Brand style={{color:'#52734D'}}>Youtrition</Navbar.Brand> */}
+        <NavItem><Link  style={{color:'#52734D'}} to="/" className="nav-link">Youtrition</Link></NavItem>
         {
           isAuth &&
           <NavItem><Link to="/profile" className="nav-link" style={{color:'#52734D'}} >Profile</Link></NavItem>
         }
+        
+        {
+          isAuth &&
+          <NavItem><Link to="/news" className="nav-link" style={{color:'#52734D'}} >Latest News</Link></NavItem>
+        }
+
+        
         {
           isAuth ? <LogoutButton /> : <LoginButton />
         }
