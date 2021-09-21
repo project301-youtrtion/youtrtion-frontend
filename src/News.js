@@ -26,15 +26,15 @@ class News extends React.Component {
   };
   render() {
     return (
-      <div>
-        <NewsForm handleSearch={this.handleSearch}/>
+      <div className='newsPage'>
+        <img
+          src={window.location.origin + '/nutritionnews.png'}
+          alt="nutritionnews"
+          style={{ width: '50%', height: '250px', marginLeft: '23%' , marginTop:'15%' }}
+        />
+        <NewsForm handleSearch={this.handleSearch} />
+        <NewsCard info={this.state.info} newsData={this.state.newsData} />
 
-      <NewsCard 
-      info={this.state.info}
-      newsData={this.state.newsData}
-      />
-
-      
       </div>
     );
   }

@@ -44,36 +44,42 @@ export class FormTracker extends Component {
   render() {
     return (
       <div>
+        <img
+              src={window.location.origin + '/BMI2.png'}
+              alt="BMI2"
+              style={{width:'50%', height:'250px', marginLeft:'23%'}}
+               />
         <Form
           onSubmit={this.handleClickAddItem}
           style={{
             width: "60%",
-            marginLeft: "20%",
+            marginLeft: "15%",
             marginTop: "5%",
-            paddingLeft: "4%",
+            
           }}
           className="formTracker"
         >
           <Row>
+
             <Col xs={7}>
-              <Form.Control type='text' placeholder="Search for food" name="item" />
+              <Form.Control type='text' placeholder="Search for food" name="item" style={{width:'102%'}} />
             </Col>
             <Col>
-              <Form.Control type='text' placeholder="quantity/serve" name="serve" />
+              <Form.Control type='text' placeholder="quantity/serve" name="serve" style={{width:'100%'}} />
             </Col>
             <Col>
               <Button type="submit">Add Item</Button>
             </Col>
           </Row>
         </Form>
-        <div className= 'claRemani'
-        
+        <div className='claRemani'
+
         >
           <h5 >
             Calories Remaining
           </h5>
 
-          <Table responsive className='dailyCalGoalTable' > 
+          <Table responsive className='dailyCalGoalTable' >
             <thead>
               <tr>
                 <th style={{ width: "20%" }}>Goal</th>
@@ -91,7 +97,7 @@ export class FormTracker extends Component {
                 <td></td>
                 <td>{this.state.totalCalories}</td>
                 <td></td>
-                <td>{this.props.limitCals-this.state.totalCalories}</td>
+                <td>{this.props.limitCals - this.state.totalCalories}</td>
               </tr>
             </tbody>
           </Table>
@@ -101,7 +107,7 @@ export class FormTracker extends Component {
           // striped
           // bordered
           hover
-          style={{ width: "60%", marginLeft: "20%", marginTop: "2%" }}
+          style={{ width: "47%", marginLeft: "23%", marginTop: "2%" }}
           className="tableform"
         >
           <thead>
@@ -135,12 +141,13 @@ export class FormTracker extends Component {
         </Table>
         <Button
           size="lg"
-          style={{ marginLeft: "40%", marginTop: "10%" }}
+          style={{ marginLeft: "37.5%" }}
           onClick={this.handleCompletetracker}
           className="buttonforClear"
         >
           Complete your Daily-Tracker
         </Button>
+        
       </div>
     );
   }

@@ -1,40 +1,40 @@
 .tableform{
 
-border: solid white 3px;
+/* border: solid white 3px; */
+width: 20%;
 
 }
 
 .tableform td {
-    color:white;
+    color:#213E3B;
     text-align: center;
     font-weight: bold;
     font-size: 14pt;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    text-shadow: 2px 2px 2px black;
+    /* text-shadow: 2px 2px 2px black; */
 }
 .tableform th {
-    color:white;
+    color:#213E3B;
     text-align: center;
     font-weight: bold;
     font-size: 14pt;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    text-shadow: 2px 2px 2px black;
+    /* text-shadow: 2px 2px 2px black; */
 }
 
 .buttonforClear.btn-primary {
-  background-color: rgb(77, 121, 34);    
+  background-color: #213E3B;    
   color: white;
   text-align: center;
   font-weight: bold;
   font-size: 14pt;
   font-family: Georgia, 'Times New Roman', Times, serif;
   text-shadow: 2px 2px 2px black;
-  margin: 5px;
-  
+  margin:5%;
   border: solid white 3px;
 }
 .formTracker button {
-    background-color: rgb(77, 121, 34);    
+    background-color: #213E3B;    
     color: white;
     font-weight: bolder;
     font-size: 12pt;
@@ -47,18 +47,18 @@ border: solid white 3px;
   }
   
   .buttonforClear.btn-primary:hover{
-    background-color: rgb(41, 63, 19);
-    border: solid rgb(145, 235, 54) 3px;
+    background-color: #41AEA9;
+    border: solid #E8FFFF 3px;
   }
   .formTracker button:hover{
-    background-color: rgb(41, 63, 19);
-    border: solid rgb(145, 235, 54) 3px;    
+    background-color: #41AEA9;
+    border: solid #E8FFFF 3px;    
   }
   
   
   .claRemani h5{
-    color: white;
-    text-shadow: 2px 2px 2px black;
+    color: #213E3B;
+    /* text-shadow: 2px 2px 2px black; */
     padding: 3%;
     font-weight: bolder;
     font-size: 18pt;
@@ -81,5 +81,8 @@ border: solid white 3px;
     
   }
   
+  .formTracker Form.Control{
+    width: 20%;
+  }
   
   

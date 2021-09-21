@@ -1,7 +1,4 @@
 import React, { Component } from "react";
-
-import { Main } from "./components/Main";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import Login from "./Login";
 import Profile from "./Profile";
@@ -29,7 +26,7 @@ export class App extends Component {
           <Router>
 
 
-          {isAuth && <Header/>}
+            {isAuth && <Header />}
             <Switch>
               <Route exact path="/">
                 {isAuth ? <Recipes /> : <Login />}
@@ -42,10 +39,10 @@ export class App extends Component {
               <Route exact path="/callback">
 
 
-              {isAuth &&  <Callback />}
+                {isAuth && <Callback />}
               </Route>
               <Route exact path="/news">
-              {isAuth && <News/>}
+                {isAuth && <News />}
               </Route>
             </Switch>
             {/* <Footer /> */}

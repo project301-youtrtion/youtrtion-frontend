@@ -22,12 +22,12 @@ export class DietPlan extends Component {
             recipeType: '',
             userId: '',
             email: this.props.auth0.user.email,
-            gender :'',
-            height:'',
-            weight:'',
-            age :'',
-            activety:''
-        
+            gender: '',
+            height: '',
+            weight: '',
+            age: '',
+            activety: ''
+
         })
     }
 
@@ -45,61 +45,71 @@ export class DietPlan extends Component {
     }
 
     handelBmi = async (email) => {
-      
-            let serverUrl = `${process.env.REACT_APP_SERVER_URL}/diet?email=${email}`;
+
+        let serverUrl = `${process.env.REACT_APP_SERVER_URL}/diet?email=${email}`;
         const BmiDataResponce = await axios.get(serverUrl);
         console.log(BmiDataResponce.data[0]);
         if (BmiDataResponce.data[0]) {
-        let gender = BmiDataResponce.data[0].gender;
-        let height = BmiDataResponce.data[0].height;
-        let weight = BmiDataResponce.data[0].weight;
-        let age = BmiDataResponce.data[0].age;
-        let activety = BmiDataResponce.data[0].activety;
+            let gender = BmiDataResponce.data[0].gender;
+            let height = BmiDataResponce.data[0].height;
+            let weight = BmiDataResponce.data[0].weight;
+            let age = BmiDataResponce.data[0].age;
+            let activety = BmiDataResponce.data[0].activety;
 
-        let dailyCal;
-        let caloreisLimit;
-        let typeOfRecipe;
-        let bmi = Math.floor((weight / ((height / 100) * (height / 100))));
-        // console.log(weight);
-        let weightStatus;
-        if (gender === 'male') {
-            dailyCal = Math.floor(((10 * weight) + (6.25 * height) - (5 * age) + 5) * activety)
-        } else {
-            dailyCal = Math.floor(((10 * weight) + (6.25 * height) - (5 * age) - 161) * activety)
-        };
-        if (bmi < '18.5') {
-            weightStatus = 'UnderWeight';
-            caloreisLimit = dailyCal + 500;
-            typeOfRecipe = 'high carbs, high fat, high Protein';
-        }
-        else if (bmi >= '18.5' && bmi < '24.9') {
-            weightStatus = 'Healthy Weight';
-            caloreisLimit = dailyCal
-            typeOfRecipe = 'balanced'
+            let dailyCal;
+            let caloreisLimit;
+            let typeOfRecipe;
+            let bmi = Math.floor((weight / ((height / 100) * (height / 100))));
+            // console.log(weight);
+            let weightStatus;
+            if (gender === 'male') {
+                dailyCal = Math.floor(((10 * weight) + (6.25 * height) - (5 * age) + 5) * activety)
+            } else {
+                dailyCal = Math.floor(((10 * weight) + (6.25 * height) - (5 * age) - 161) * activety)
+            };
+            if (bmi < '18.5') {
+                weightStatus = 'UnderWeight';
+                caloreisLimit = dailyCal + 500;
+                typeOfRecipe = 'high carbs, high fat, high Protein';
+            }
+            else if (bmi >= '18.5' && bmi < '24.9') {
+                weightStatus = 'Healthy Weight';
+                caloreisLimit = dailyCal
+                typeOfRecipe = 'balanced'
 
-        } else {
-            weightStatus = `OverWeight `
-            caloreisLimit = dailyCal - 500
-            typeOfRecipe = 'high fiber, low carbs, low Fat'
-        }
-        await this.setState({
-            dailyCalories: dailyCal,           
-            healthStatus: weightStatus,
-            bmi: bmi,
-            limitOfCalories: caloreisLimit,
-            recipeType: typeOfRecipe,            
-            userId: BmiDataResponce.data[0]._id,
-            gender :gender,
-            height:height,
-            weight:weight,
-            age :age,
-            activety:activety
+            }
+            else if (bmi >= '25.0' && bmi < '29.9') {
+                weightStatus = `OverWeight `
+                caloreisLimit = dailyCal - 500
+                typeOfRecipe = 'high fiber, low carbs, low Fat'
 
-        });
-        console.log(this.state.height);
-        this.props.getTheCalsLimit(this.state.limitOfCalories); 
+            } else if (bmi >= '30.0' && bmi < '34.9') {
+                weightStatus = `Obese `
+                caloreisLimit = dailyCal - 500
+                typeOfRecipe = 'high fiber, low carbs, low Fat'
+            } else{
+                weightStatus = `Extremly Obese `
+                caloreisLimit = dailyCal - 500
+                typeOfRecipe = 'high fiber, low carbs, low Fat'
+            }
+            await this.setState({
+                dailyCalories: dailyCal,
+                healthStatus: weightStatus,
+                bmi: bmi,
+                limitOfCalories: caloreisLimit,
+                recipeType: typeOfRecipe,
+                userId: BmiDataResponce.data[0]._id,
+                gender: gender,
+                height: height,
+                weight: weight,
+                age: age,
+                activety: activety
+
+            });
+            console.log(this.state.height);
+            this.props.getTheCalsLimit(this.state.limitOfCalories);
         }
-        
+
     }
     handelAdd = (e) => {
         console.log('hi');
@@ -114,11 +124,11 @@ export class DietPlan extends Component {
             email: this.props.auth0.user.email
         }
         const responsePost = axios.post(`${process.env.REACT_APP_SERVER_URL}/diet`, responseBody);
-        
+
         this.handelBmi(responseBody.email);
         this.handelDisplayDataModal();
         console.log(responsePost);
-        
+
     }
 
     handelUpdate = (e) => {
@@ -142,7 +152,7 @@ export class DietPlan extends Component {
 
     componentDidMount = () => {
         this.handelBmi(this.state.email);
-        
+
     };
 
     render() {
@@ -162,10 +172,8 @@ export class DietPlan extends Component {
                     modelState={this.state}
                 />
                 <>
-                    {/* <h3> your daily current calories consumption is {this.state.dailyCalories}</h3>
-                <h3> {this.state.healthStatus}</h3>
-                <h3> {this.state.bmi}</h3> */}
-                    <Table striped bordered hover style={{ width: '80%', marginLeft: '10%', marginTop: '30px' }}>
+                
+                    <Table  style={{ width: '80%', marginLeft: '10%', marginTop: '5%' }}>
 
                         <tbody className='tdDitePlan'>
                             <tr >
@@ -193,14 +201,18 @@ export class DietPlan extends Component {
                         {
                             this.state.userId ?
                                 <Button className='btnDitePlan' style={{ margin: '5px' }} onClick={this.handelDisplayUpdateModel}>
-                                    Edit
+                                   Edit
                                 </Button> : <Button className='btnDitePlan' onClick={this.handelDisplayDataModal}>
                                     Add
                                 </Button>
                         }
 
                     </Table>
-
+                    <img
+              src={window.location.origin + '/BMI.png'}
+              alt="BMI"
+              style={{width:'70%', height:'550px', marginLeft:'15%'}}
+               />
                 </>
             </div>
         )

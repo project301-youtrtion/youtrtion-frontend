@@ -1,5 +1,5 @@
 import React from 'react'
-
+import  './Recipes.css'
 export default function Recipe(props) {
     return (
         <div key={props.id} className="row">
@@ -8,9 +8,9 @@ export default function Recipe(props) {
                         </div>
                         <div className="col-md-9">
                             <h3>Recipe Name: {props.recipe.name}</h3>
-                            <p>Calories: {props.recipe.calories}</p>
-                            <p>Diet Labels: {props.recipe.dietLabels}</p>
-                            <p>Ingredients: {props.recipe.ingredients}</p>
+                            <p><strong>Calories:</strong> {props.recipe.calories}</p>
+                            <p><strong>Diet Labels:</strong> {props.recipe.dietLabels}</p>
+                            <p><strong>Ingredients:</strong> {props.recipe.ingredients}</p>
                       
                         </div>
                     </div>
