@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react'
 import Card from './Card';
 import './Recipes.css';
@@ -11,14 +12,14 @@ import Recipe from './Recipe';
 import loading from '../images/generating.gif';
 import "bootstrap/dist/css/bootstrap.min.css";
 
-
 import {Form, Button,Row,Col} from "react-bootstrap";
 
-import axios from 'axios';
+import axios from "axios";
 
 
 
 export default class Recipes extends Component {
+
     
     constructor(props){
         super(props);
@@ -63,9 +64,14 @@ export default class Recipes extends Component {
     loadData = async (searchKey) => {
     
 
-        let url =`https://api.edamam.com/search?q=${searchKey}&app_id=${process.env.REACT_APP_ID}&app_key=${process.env.REACT_APP_KEY}`;
-        console.log(url);
-        let dietRecipe= await axios.get(url);
+
+    return tempRecipes;
+  };
+  loadData = async (searchKey) => {
+    let url = `https://api.edamam.com/search?q=${searchKey}&app_id=${process.env.REACT_APP_ID}&app_key=${process.env.REACT_APP_KEY}`;
+    console.log(url);
+    let dietRecipe = await axios.get(url);
+
 
              this.setState({
                 
@@ -152,12 +158,13 @@ export default class Recipes extends Component {
     : null
     }
 
-    {
-        this.state.displayRecipes && this.state.recipes ?
-             <div className="container">
+
+        {this.state.displayRecipes && this.state.recipes ? (
+          <div className="container">
             {this.state.recipes.map((recipe, id) => {
-                return <Recipe key={id} recipe={recipe}/>
+              return <Recipe key={id} recipe={recipe} />;
             })}
+
             <a className="backbutton" href="/recipes"><button type="button" className="btn btn-primary btn-lg">Back</button></a>
         </div>
         : (this.state.displayRecipes ? <img className="loading" src={loading} alt="loading.."/> : null)
@@ -181,4 +188,5 @@ export default class Recipes extends Component {
     </>
         )
     }
+
 }
