@@ -3,7 +3,7 @@ import axios from "axios";
 import "./News.css";
 import NewsForm from "./NewsForm";
 import NewsCard from "./NewsCard";
-import NewsPosts from "./NewsPosts";
+
 
 class News extends React.Component {
   constructor(props) {
@@ -40,7 +40,7 @@ class News extends React.Component {
         <NewsForm handleSearch={this.handleSearch} />
         <NewsCard info={this.state.info} newsData={this.state.newsData} random={this.random}/>
 
-        {/* <NewsPosts info={this.state.info} newsData={this.state.newsData} random={this.random}/> */}
+        
 
       </div>
     );

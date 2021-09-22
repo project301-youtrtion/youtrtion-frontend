@@ -13,10 +13,10 @@ class NewsCard extends React.Component {
                     <div className="w3-col l8 s12">
                       <div className="w3-card-4">
                         {el.image_url &&
-                        
-                        <img src={el.image_url} style={{width:'70%',height:'250px',marginBottom:"4%",marginLeft:'10%',display:'block'}} />}
-                      
-                      {/* style={{width:'70%',height:'250px',marginBottom:"4%",marginLeft:'10%'}} */}
+
+                          <img src={el.image_url} alt='' style={{ width: '70%', height: '250px', marginBottom: "4%", marginLeft: '10%', display: 'block' }} />}
+
+                        {/* style={{width:'70%',height:'250px',marginBottom:"4%",marginLeft:'10%'}} */}
                         <div className="w3-container">
                           <h3>
                             <b>{el.title}</b>
@@ -65,7 +65,7 @@ class NewsCard extends React.Component {
                       <hr />
                     </div>
                   </div>
-                
+
                 </>
               );
             })}
