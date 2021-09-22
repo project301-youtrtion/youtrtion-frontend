@@ -3,6 +3,7 @@ import axios from "axios";
 import "./News.css";
 import NewsForm from "./NewsForm";
 import NewsCard from "./NewsCard";
+import NewsPosts from "./NewsPosts";
 
 class News extends React.Component {
   constructor(props) {
@@ -24,7 +25,10 @@ class News extends React.Component {
     await this.setState({ newsData: getNews.data, info: true });
     console.log(this.state.newsData.results);
   };
- 
+  random=()=>{
+    return Math.floor(Math.random() * 1000);
+
+  }
   render() {
     return (
       <div className='newsPage'>
@@ -34,7 +38,9 @@ class News extends React.Component {
           style={{ width: '50%', height: '250px', marginLeft: '23%' , marginTop:'15%' }}
         />
         <NewsForm handleSearch={this.handleSearch} />
-        <NewsCard info={this.state.info} newsData={this.state.newsData} />
+        <NewsCard info={this.state.info} newsData={this.state.newsData} random={this.random}/>
+
+        {/* <NewsPosts info={this.state.info} newsData={this.state.newsData} random={this.random}/> */}
 
       </div>
     );

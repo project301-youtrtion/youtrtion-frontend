@@ -5,45 +5,70 @@ import ListGroup from 'react-bootstrap/ListGroup'
 class NewsPosts extends React.Component {
   render() {
     return (
-      <div>
-        <div class="w3-card-w3-margin">
-          <div class="w3-container-w3-padding"></div>
-          <ListGroup>
-            <ListGroup.Item className="items">
-              <h4>Popular Posts</h4>
-              <img src="https://twigscafe.com/wp-content/uploads/2020/08/keto-diet-low-carb-concept-top-view-1160x870.jpg" />
-              <p>
-                {" "}
-                In simple terms, the ketogenic diet refers to a very high fat
-                and low-carb diet. The keto diet was introduced by modern
-                physicians as a replacement for fasting back in the 1920s to
-                treat epilepsy in children. It was successful for around 20
-                years. After the invention of newer medication, it was abandoned
-                for years.In recent years, the keto diet has become the most
-                popular diet in the USA and many other countries around the
-                world.
-              </p>
-            </ListGroup.Item>
-            <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-            <ListGroup.Item>Morbi leo risus</ListGroup.Item>
-            <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
-            <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-          </ListGroup>
+      <>
+      <div class="w3-content2" style={{ backgroundColor: "white" }}>
+        {this.props.info &&
+          this.props.newsData.results.map((el) => {
+            return (
+              <>
+                <div className="w3-row2">
+                  <div className="w3-col l8 s12">
+                    <div className="w3-card-4">
+                      <img src={el.image_url}/>
 
-          <span class="w3-large">Lorem</span>
-          <br />
-          <span>Sed mattis nunc</span>
-        </div>
-        <div class="w3-card w3-margin">
-          <div class="w3-container w3-padding">
-            <h4>Tags</h4>
-          </div>
-          <div class="w3-container w3-white">
-            <p />
-            <span class="w3-tag w3-black w3-margin-bottom">Travel</span>
-          </div>
-        </div>
+                      <div className="w3-container2">
+                        <h3>
+                          <b>{el.title}</b>
+                        </h3>
+                        <h5>
+                          {el.creator}
+                          <span className="w3-opacity">{el.pubDate}</span>
+                        </h5>
+                      </div>
+
+                      <div className="w3-container">
+                        <p className="parag">{el.description}</p>
+                        <div className="w3-row">
+                          <div className="w3-col m8 s12">
+                            <p className="news-button">
+                              {/* <button
+                                className="newbutton"
+                                style={{
+                                  backgroundColor: "transparent",
+                                  color: "black",
+                                  width: "56%",
+                                }}
+                              > */}
+                              <b>
+                                {" "}
+                                <a id="newsLink" href={el.link}>
+                                  READ MORE »
+                                </a>
+                              </b>
+                              {/* </button> */}
+                            </p>
+                          </div>
+                          <div className="w3-col m4 w3-hide-small">
+                            <p>
+                              <span className="w3-padding-large">
+                                <b>Comments  </b>{" "}
+                                <span className="w3-tag">
+                                  {this.props.random()}
+                                </span>
+                              </span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <hr />
+                  </div>
+                </div>
+              </>
+            );
+          })}
       </div>
+    </>
     );
   }
 }
