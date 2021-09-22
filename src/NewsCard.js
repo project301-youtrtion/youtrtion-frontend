@@ -4,14 +4,19 @@ class NewsCard extends React.Component {
   render() {
     return (
       <>
-        <div class="w3-content" style={{ backgroundColor:'white'}}>
+        <div class="w3-content" style={{ backgroundColor: "white" }}>
           {this.props.info &&
             this.props.newsData.results.map((el) => {
               return (
                 <>
-                  <div className="w3-row" >
+                  <div className="w3-row">
                     <div className="w3-col l8 s12">
                       <div className="w3-card-4">
+                        {el.image_url &&
+                        
+                        <img src={el.image_url} style={{width:'70%',height:'250px',marginBottom:"4%",marginLeft:'10%',display:'block'}} />}
+                      
+                      {/* style={{width:'70%',height:'250px',marginBottom:"4%",marginLeft:'10%'}} */}
                         <div className="w3-container">
                           <h3>
                             <b>{el.title}</b>
@@ -23,27 +28,34 @@ class NewsCard extends React.Component {
                         </div>
 
                         <div className="w3-container">
-                          <p className="parag">{el.description}</p>
+                          <p className="parag">{el.description}................</p>
                           <div className="w3-row">
                             <div className="w3-col m8 s12">
                               <p className="news-button">
-                                <button
+                                {/* <button
                                   className="newbutton"
                                   style={{
                                     backgroundColor: "transparent",
                                     color: "black",
                                     width: "56%",
                                   }}
-                                >
-                                  <b>READ MORE »</b>
-                                </button>
+                                > */}
+                                <b>
+                                  {" "}
+                                  <a id="newsLink" href={el.link}>
+                                    READ MORE »
+                                  </a>
+                                </b>
+                                {/* </button> */}
                               </p>
                             </div>
                             <div className="w3-col m4 w3-hide-small">
                               <p>
                                 <span className="w3-padding-large">
                                   <b>Comments  </b>{" "}
-                                  <span className="w3-tag">0</span>
+                                  <span className="w3-tag">
+                                    {this.props.random()}
+                                  </span>
                                 </span>
                               </p>
                             </div>
@@ -53,6 +65,7 @@ class NewsCard extends React.Component {
                       <hr />
                     </div>
                   </div>
+                
                 </>
               );
             })}
