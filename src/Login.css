@@ -1,5 +1,5 @@
 .loginPage{
-    background-image: url('/home/salsabilmislat/code301/youtrtion-frontend/src/images/download.jpg');
+    background-image: url('./images/download.jpg');
  background-repeat: no-repeat;
  background-size:cover;
     height: 750px;
