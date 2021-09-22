@@ -13,7 +13,7 @@ import './App.css'
 
 import Header from "./components/Header";
 import News from "./News";
-
+import Footer from "./components/Footer";
 
 export class App extends Component {
   render() {
@@ -45,8 +45,10 @@ export class App extends Component {
                 {isAuth && <News />}
               </Route>
             </Switch>
-            {/* <Footer /> */}
-
+            
+            {   isAuth &&  <Footer /> }
+             
+           
           </Router>
         </>
 
