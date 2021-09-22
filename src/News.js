@@ -32,6 +32,7 @@ class News extends React.Component {
   render() {
     return (
       <div className='newsPage'>
+        
         <img
           src={window.location.origin + '/nutritionnews.png'}
           alt="nutritionnews"

@@ -5,8 +5,8 @@ class Footer extends React.Component {
     render() {
         return (<>
             <br />
-            <div style={{ backgroundColor: '#213E3B', height: '100px', padding: '0.5%' }}>
-               
+            <div style={{ backgroundColor: '#213E3B', height: '100px', padding: '0.5%', clear: "both", position: "relative",  bottom:"0"}}>
+
                 <Navbar collapseOnSelect expand="lg">
 
                     <NavItem style={{ color: 'white', fontSize: "14pt", marginLeft: '150px' }}>Salsabil Mislat</NavItem>
@@ -19,12 +19,12 @@ class Footer extends React.Component {
                 <br />
                 <h3 style={{ color: 'white', fontSize: "14pt", marginLeft: '45%' }}>©️Youtrition</h3>
 
-                
+
 
 
             </div>
-            </> )
-        
+        </>)
+
     }
 }
 export default Footer;
