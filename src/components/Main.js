@@ -17,7 +17,7 @@ export class Main extends Component {
       user: null,
     })
   }
-  getTheCalsLimit = async (limitOfCals) => {
+  getTheCalsLimited = async (limitOfCals) => {
     await this.setState({ limitCals: limitOfCals })
 
   }
@@ -40,10 +40,9 @@ export class Main extends Component {
         
         <Tabs defaultActiveKey="BMI" id="uncontrolled-tab-example" className="mb-3">
           <Tab eventKey="BMI" title="BMI" >
-            <DietPlan getTheCalsLimit={this.getTheCalsLimit} />
+            <DietPlan getTheCalsLimit={this.getTheCalsLimited} />
           </Tab>
-          <Tab eventKey="Calories Tracker" style={{ color: 'white' }} title="Calories Tracker"
-            style={{ fontcolor: 'white' }}>
+          <Tab eventKey="Calories Tracker" style={{ color: 'white',fontcolor: 'white' }} title="Calories Tracker">
             <FormTracker limitCals={this.state.limitCals} />
           </Tab>
         </Tabs>
